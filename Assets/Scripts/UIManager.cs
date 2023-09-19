@@ -17,24 +17,35 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Button BtnWithdrawPopup;
     [SerializeField]
-    private Button BtnTurnFirstPopo;
+    private Button BtnCreditPopupExit;
+    [SerializeField]
+    private Button BtnWithdrawPopupExit;
 
 
     public void Start()
     {
         BtnCreditPopup.onClick.AddListener(() =>
         {
-            Popup(CreditPopup, FirstPopup);
+            Popup(CreditPopup,FirstPopup);
         });
 
-        BtnCreditPopup.onClick.AddListener(() =>
+        BtnWithdrawPopup.onClick.AddListener(() =>
         {
-            Popup(WithdrawPopup, FirstPopup);
+            Popup(WithdrawPopup,FirstPopup);
         });
+        BtnCreditPopupExit.onClick.AddListener(() =>
+        {
+            Popup(FirstPopup,CreditPopup);
+        });
+        BtnWithdrawPopupExit.onClick.AddListener(() =>
+        {
+            Popup(FirstPopup,WithdrawPopup);
+        });
+
     }
 
 
-    public void Popup(GameObject OngameObject, GameObject OffgameObject)
+    private void Popup(GameObject OngameObject,GameObject OffgameObject)
     {
         OngameObject.SetActive(true);
         OffgameObject.SetActive(false);
