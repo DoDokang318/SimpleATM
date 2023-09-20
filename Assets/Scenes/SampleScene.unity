@@ -297,7 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84924e77471df44f891372e70daa448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cash: 50000
+  Money: 50000
+  TextCash: {fileID: 647889693}
 --- !u!1 &62162556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1299,7 @@ GameObject:
   - component: {fileID: 265956129}
   - component: {fileID: 265956128}
   m_Layer: 5
-  m_Name: BtnExit
+  m_Name: BtnExitWithdraw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1621,7 +1622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84924e77471df44f891372e70daa448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cash: 100000
+  Money: 100000
+  TextCash: {fileID: 2081157899}
 --- !u!114 &455853995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,12 +3094,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a9aac03e5ecf043834656f076ca1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstPopup: {fileID: 0}
-  CreditPopup: {fileID: 0}
-  WithdrawPopup: {fileID: 0}
-  BtnCreditPopup: {fileID: 0}
-  BtnWithdrawPopup: {fileID: 0}
-  BtnTurnFirstPopo: {fileID: 0}
+  FirstPopup: {fileID: 816739805}
+  CreditPopup: {fileID: 2106383008}
+  WithdrawPopup: {fileID: 1277434443}
+  BtnCreditPopup: {fileID: 2071846027}
+  BtnWithdrawPopup: {fileID: 62162558}
+  BtnCreditPopupExit: {fileID: 1866365552}
+  BtnWithdrawPopupExit: {fileID: 265956128}
 --- !u!114 &1026557723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3642,7 +3645,7 @@ GameObject:
   m_Layer: 5
   m_Name: WithdrawPopup
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4800,7 +4803,7 @@ GameObject:
   - component: {fileID: 1866365553}
   - component: {fileID: 1866365552}
   m_Layer: 5
-  m_Name: BtnExit
+  m_Name: BtnExitCredit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5419,6 +5422,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd254d32fbeffc149920833a0c89ec07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentCash: {fileID: 455853992}
+  BankCash: {fileID: 59671356}
+  In10000: {fileID: 37620995}
+  In30000: {fileID: 441510521}
+  In50000: {fileID: 1365145828}
+  Out10000: {fileID: 890332090}
+  Out30000: {fileID: 1017598158}
+  Out50000: {fileID: 141497384}
 --- !u!4 &1965411649
 Transform:
   m_ObjectHideFlags: 0
@@ -5782,13 +5793,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026557721}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1026557722}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: SendMessageUpwards
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6135,7 +6146,7 @@ GameObject:
   m_Layer: 5
   m_Name: CreditPopup
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0

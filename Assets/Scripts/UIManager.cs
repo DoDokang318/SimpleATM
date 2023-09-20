@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     private GameObject CreditPopup;
     [SerializeField]
     private GameObject WithdrawPopup;
-
+    [Header("Button")]
     [SerializeField]
     private Button BtnCreditPopup;
     [SerializeField]
@@ -49,8 +49,6 @@ public class UIManager : MonoBehaviour
     {
         OngameObject.SetActive(true);
         OffgameObject.SetActive(false);
-    
-
     }
 
 }
