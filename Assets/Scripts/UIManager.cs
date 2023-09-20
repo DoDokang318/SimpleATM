@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
     [SerializeField]
     private GameObject FirstPopup;
     [SerializeField]
@@ -24,6 +25,7 @@ public class UIManager : MonoBehaviour
 
     public void Start()
     {
+        instance = this;
         BtnCreditPopup.onClick.AddListener(() =>
         {
             Popup(CreditPopup,FirstPopup);
@@ -41,6 +43,10 @@ public class UIManager : MonoBehaviour
         {
             Popup(FirstPopup,WithdrawPopup);
         });
+
+
+
+
 
     }
 

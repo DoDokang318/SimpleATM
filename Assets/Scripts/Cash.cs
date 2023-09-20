@@ -16,7 +16,6 @@ public class Cash : MonoBehaviour
     public void CurrentCash()
     {
         TextCash.text =Money.ToString("C");
-
     }
 
 }

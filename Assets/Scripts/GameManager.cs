@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
 
         BtnInputFieldIn.onClick.AddListener(() =>
         {
-            InMoney(int.Parse(inputFieldIn.text));
+            InMoney(int.Parse(inputFieldIn.text ));
 
         });
 
@@ -97,11 +97,13 @@ public class GameManager : MonoBehaviour
             OutMoney(10000);
 
         });
+
         Out30000.onClick.AddListener(() =>
         {
 
             OutMoney(30000);
         });
+
         Out50000.onClick.AddListener(() =>
         {
             OutMoney(50000);
@@ -110,7 +112,7 @@ public class GameManager : MonoBehaviour
 
         BtnInputFieldOut.onClick.AddListener(() =>
         {
-            OutMoney(int.Parse(inputFieldOut.text));
+            OutMoney(int.Parse(inputFieldOut.text ));
 
         });
     }
@@ -129,8 +131,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {        
-            Debug.Log("µ∑∫Œ¡∑");
-       
+            Debug.Log("µ∑∫Œ¡∑");      
         }
 
     }
@@ -150,7 +151,6 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("µ∑∫Œ¡∑");
-
         }
 
     }
