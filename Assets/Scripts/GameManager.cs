@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private Cash cash;
 
-    public delegate void UpdateCash(); //입금
-    public delegate void OutCash(); // 출금 
+    public delegate void UpdateCash(); 
+
 
     public event UpdateCash Updatecassh;
 
